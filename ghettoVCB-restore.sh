@@ -324,7 +324,7 @@ if [ ! "${IS_TGZ}" == "1" ]; then
                     DS_VMDK_PATH=$(echo "${SOURCE_LINE_VMDK}" | sed 's/\/vmfs\/volumes\///g')
                     VMDK_DATASTORE=$(echo "${DS_VMDK_PATH%%/*}")
                     VMDK_VM=$(echo "${DS_VMDK_PATH##*/}")
-                    SOURCE_VMDK="${VM_TO_RESTORE}/${VMDK_DATASTORE}/${VMDK_VM}"
+                    SOURCE_VMDK="${VM_TO_RESTORE}/${VMDK_VM}"
                 else
                     SOURCE_VMDK="${VM_TO_RESTORE}/${SOURCE_LINE_VMDK}"
                 fi
